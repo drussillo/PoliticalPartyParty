@@ -8,5 +8,4 @@
 
 *.layout
 
-game/build/*
-# !game/build/.gitkeep
+**/build/*
