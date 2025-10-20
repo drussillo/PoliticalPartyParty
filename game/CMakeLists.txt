@@ -29,3 +29,7 @@ target_include_directories(PoliticalPartyParty PRIVATE
 #   OpenGL::GL
 #   glfw
 # )
+
+target_compile_options(PoliticalPartyParty PRIVATE
+  -Wall -Wextra -Wpedantic
+)
