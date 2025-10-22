@@ -1,6 +1,4 @@
 #ifndef EXAMPLE_H
 #define EXAMPLE_H
 
-
-
-#endif
+#endif // !EXAMPLE_H
