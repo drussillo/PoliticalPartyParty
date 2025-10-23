@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.5.1 Safari/537.36" version="28.2.5">
   <diagram name="Page-1" id="FGV6vgqSfoxWxaIOB1Dc">
-    <mxGraphModel dx="889" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="2" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1237" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="2" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -84,22 +84,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="T8Ft-jYD-zRcywxO-IXU-1" value="Shader&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="910" width="360" height="250" as="geometry" />
+          <mxGeometry x="195" y="920" width="440" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="T8Ft-jYD-zRcywxO-IXU-2" value="&lt;div&gt;- programID: unsigned int&lt;/div&gt;&lt;div&gt;- vertexShader: unsigned int&lt;/div&gt;&lt;div&gt;- fragmentShader: unsigned int&lt;/div&gt;- vertexSource: std::string&lt;div&gt;- fragmentSource: std::string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
-          <mxGeometry y="26" width="360" height="84" as="geometry" />
+        <mxCell id="T8Ft-jYD-zRcywxO-IXU-2" value="&lt;div&gt;- program: unsigned int&lt;/div&gt;&lt;div&gt;- vertexShader: unsigned int&lt;/div&gt;&lt;div&gt;- fragmentShader: unsigned int&lt;/div&gt;- vertexSource: std::string&lt;div&gt;- fragmentSource: std::string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
+          <mxGeometry y="26" width="440" height="84" as="geometry" />
         </mxCell>
         <mxCell id="T8Ft-jYD-zRcywxO-IXU-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
-          <mxGeometry y="110" width="360" height="8" as="geometry" />
+          <mxGeometry y="110" width="440" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="T8Ft-jYD-zRcywxO-IXU-4" value="+ Shader()&lt;div&gt;+ Shader(vertexPath: std::string, fragmentPath: std::string)&lt;/div&gt;&lt;div&gt;+ setVertex(vertexPath: std::string): void&lt;/div&gt;&lt;div&gt;+ setFragment(fragmentPath: std::string): void&lt;/div&gt;&lt;div&gt;+ compile(): void&lt;/div&gt;&lt;div&gt;+ link(): void&lt;/div&gt;&lt;div&gt;+ use(): void&lt;/div&gt;&lt;div&gt;- compileShader(shader: char[])&amp;nbsp; // use std::string.c_str()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
-          <mxGeometry y="118" width="360" height="132" as="geometry" />
-        </mxCell>
-        <mxCell id="0-tj1WhlATv3brFM4E0G-1" value="*Type is yet to be defined precisely" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="150" y="1380" width="210" height="30" as="geometry" />
+        <mxCell id="T8Ft-jYD-zRcywxO-IXU-4" value="&lt;div&gt;+ Shader(vertexPath: const std::string&amp;amp;=&quot;&quot;, fragmentPath: const std::string&amp;amp;=&quot;&quot;)&lt;/div&gt;&lt;div&gt;+ ~Shader()&lt;/div&gt;&lt;div&gt;+ setVertex(vertexPath: const std::string&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ setFragment(fragmentPath: const std::string&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ compile(): void&lt;/div&gt;&lt;div&gt;+ link(): void&lt;/div&gt;&lt;div&gt;+ use(): void&lt;/div&gt;&lt;div&gt;+ static unbind(): void&lt;/div&gt;&lt;div&gt;- compileShader(shaderType: const GLenum, source: const char*): unsigned int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
+          <mxGeometry y="118" width="440" height="152" as="geometry" />
         </mxCell>
         <mxCell id="0-tj1WhlATv3brFM4E0G-2" value="Scene" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="565" y="300" width="440" height="190" as="geometry" />
+          <mxGeometry x="565" y="300" width="440" height="200" as="geometry" />
         </mxCell>
         <mxCell id="0-tj1WhlATv3brFM4E0G-3" value="# finished: bool&lt;div&gt;# nextScene: std::unique_ptr&amp;lt;Scene&amp;gt;&lt;/div&gt;&lt;div&gt;# elements: std::vector&amp;lt;Element&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-tj1WhlATv3brFM4E0G-2" vertex="1">
           <mxGeometry y="26" width="440" height="54" as="geometry" />
@@ -107,23 +104,23 @@
         <mxCell id="0-tj1WhlATv3brFM4E0G-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="0-tj1WhlATv3brFM4E0G-2" vertex="1">
           <mxGeometry y="80" width="440" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="0-tj1WhlATv3brFM4E0G-5" value="+ virtual handleInput(): void = 0&lt;div&gt;+ virtual update(delta_time: double): void = 0&lt;/div&gt;&lt;div&gt;+ virtual render(rederer: Renderer): void = 0&lt;/div&gt;&lt;div&gt;+ isFinished(): bool&lt;/div&gt;&lt;div&gt;+ getNextScene(): std::unique_ptr&amp;lt;Scene&amp;gt;&lt;/div&gt;&lt;div&gt;# setNextScene(next_scene: Scene): void&amp;nbsp; // use std::make_shared&amp;lt;Scene&amp;gt;();&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-tj1WhlATv3brFM4E0G-2" vertex="1">
-          <mxGeometry y="88" width="440" height="102" as="geometry" />
+        <mxCell id="0-tj1WhlATv3brFM4E0G-5" value="&lt;div&gt;+ render(): void&lt;/div&gt;+ virtual handleInput(): void = 0&lt;div&gt;+ virtual update(delta_time: double): void = 0&lt;/div&gt;&lt;div&gt;+ virtual render(rederer: Renderer): void = 0&lt;/div&gt;&lt;div&gt;+ isFinished(): bool&lt;/div&gt;&lt;div&gt;+ getNextScene(): std::unique_ptr&amp;lt;Scene&amp;gt;&lt;/div&gt;&lt;div&gt;# setNextScene(next_scene: Scene): void&amp;nbsp; // use std::make_shared&amp;lt;Scene&amp;gt;();&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-tj1WhlATv3brFM4E0G-2" vertex="1">
+          <mxGeometry y="88" width="440" height="112" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-3" target="XD_9YJwZ4juTtrg6oqWc-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-3" value="Mesh" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="741" y="1080" width="220" height="230" as="geometry" />
+          <mxGeometry x="660" y="1210" width="360" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="XD_9YJwZ4juTtrg6oqWc-4" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- VAO: unsigned int&lt;/span&gt;&lt;/div&gt;- VBO: unsigned int&lt;div&gt;- EBO: unsigned int&lt;/div&gt;&lt;div&gt;- vertexCount: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-3" vertex="1">
-          <mxGeometry y="26" width="220" height="84" as="geometry" />
+        <mxCell id="XD_9YJwZ4juTtrg6oqWc-4" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- vertices: std::vector&amp;lt;float&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- attributeSizes: std::vector&amp;lt;unsigned int&amp;gt;&lt;/div&gt;&lt;div&gt;- indices: std::vector&amp;lt;unsigned int&amp;gt;&lt;/div&gt;&lt;div&gt;- primitiveType: GLenum&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- VAO: unsigned int = 0&lt;/span&gt;&lt;/div&gt;- VBO: unsigned int = 0&lt;div&gt;- EBO: unsigned int = 0&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-3" vertex="1">
+          <mxGeometry y="26" width="360" height="114" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-5" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XD_9YJwZ4juTtrg6oqWc-3" vertex="1">
-          <mxGeometry y="110" width="220" height="8" as="geometry" />
+          <mxGeometry y="140" width="360" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="XD_9YJwZ4juTtrg6oqWc-6" value="+ Mesh()&lt;div&gt;- genVAO(): void&lt;/div&gt;&lt;div&gt;- gen VBO(): void&lt;/div&gt;&lt;div&gt;- gen EBO(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-3" vertex="1">
-          <mxGeometry y="118" width="220" height="112" as="geometry" />
+        <mxCell id="XD_9YJwZ4juTtrg6oqWc-6" value="+ Mesh(vertices: const std::vector&amp;lt;float&amp;gt;&amp;amp;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;attributeSizes: const std::vector&amp;lt;unsigned int&amp;gt;&amp;amp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;indices: const std::vector&amp;lt;unsigned int&amp;gt;&amp;amp;={}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;primitiveType: const GLenum=GL_TRIANGLES)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ ~Mesh()&lt;/div&gt;&lt;div&gt;+ getType(): const GLenum&lt;/div&gt;&lt;div&gt;+ genBuffers(): void&lt;/div&gt;&lt;div&gt;+ upload(): void&lt;/div&gt;&lt;div&gt;+ bindVAO(): void&lt;/div&gt;&lt;div&gt;+ static unbindVAO(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-3" vertex="1">
+          <mxGeometry y="148" width="360" height="162" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-8" target="XD_9YJwZ4juTtrg6oqWc-12" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -147,11 +144,11 @@
         <mxCell id="swjtOTRfwsPQYgL70EdY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-12" target="0-tj1WhlATv3brFM4E0G-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="swjtOTRfwsPQYgL70EdY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-12" target="XD_9YJwZ4juTtrg6oqWc-19" edge="1">
+        <mxCell id="swjtOTRfwsPQYgL70EdY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-12" target="XD_9YJwZ4juTtrg6oqWc-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-12" value="Element" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="730" y="630" width="310" height="240" as="geometry" />
+          <mxGeometry x="730" y="630" width="310" height="250" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-13" value="- mesh: std::shared_ptr&amp;lt;Mesh&amp;gt;&lt;div&gt;- texture: std::shared_ptr&amp;lt;Texture&amp;gt;&lt;/div&gt;&lt;div&gt;- shader: shared_ptr&amp;lt;Shader&amp;gt;&lt;/div&gt;&lt;div&gt;- position: glm::vec2&lt;/div&gt;&lt;div&gt;- rotation: float&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;- scale: glm::vec2&lt;/div&gt;&lt;div&gt;- element: glm::mat3&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-12" vertex="1">
           <mxGeometry y="26" width="310" height="114" as="geometry" />
@@ -159,21 +156,21 @@
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-14" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="XD_9YJwZ4juTtrg6oqWc-12" vertex="1">
           <mxGeometry y="140" width="310" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="XD_9YJwZ4juTtrg6oqWc-15" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setPosition(position: glm::vec2): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setRotation(degrees: float): void&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;// use glm::radians()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setScale(scale: glm::vec2): void&lt;/div&gt;+ updateMatrix(): void&lt;div&gt;+ getMatrix(): glm::mat3&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-12" vertex="1">
-          <mxGeometry y="148" width="310" height="92" as="geometry" />
+        <mxCell id="XD_9YJwZ4juTtrg6oqWc-15" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ draw(): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setPosition(position: glm::vec2): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setRotation(degrees: float): void&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;// use glm::radians()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setScale(scale: glm::vec2): void&lt;/div&gt;+ updateMatrix(): void&lt;div&gt;+ getMatrix(): glm::mat3&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-12" vertex="1">
+          <mxGeometry y="148" width="310" height="102" as="geometry" />
         </mxCell>
-        <mxCell id="4OJZKJGqhobgsFXIjQHi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-19" target="nAhd79f9uSj6KgLun1zn-31" edge="1">
+        <mxCell id="4OJZKJGqhobgsFXIjQHi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-19" target="nAhd79f9uSj6KgLun1zn-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lYI4Msy7j0Pk4nTyVZNz-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-19" target="0-tj1WhlATv3brFM4E0G-2" edge="1">
+        <mxCell id="lYI4Msy7j0Pk4nTyVZNz-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" parent="1" source="XD_9YJwZ4juTtrg6oqWc-19" target="0-tj1WhlATv3brFM4E0G-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="580" y="633" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="XD_9YJwZ4juTtrg6oqWc-19" value="Renderer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="590" width="190" height="150" as="geometry" />
+        <mxCell id="XD_9YJwZ4juTtrg6oqWc-19" value="Renderer?" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="610" width="190" height="150" as="geometry" />
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-20" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-19" vertex="1">
           <mxGeometry y="26" width="190" height="26" as="geometry" />
@@ -183,9 +180,6 @@
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-22" value="+ draw(element: Element): void&lt;div&gt;// should look at each element&amp;nbsp;&lt;/div&gt;&lt;div&gt;// and group them by shader&lt;/div&gt;&lt;div&gt;// then batch draw elements with&lt;/div&gt;&lt;div&gt;// same shaders&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-19" vertex="1">
           <mxGeometry y="60" width="190" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="lYI4Msy7j0Pk4nTyVZNz-4" value="might not need multiple shaders ?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="380" y="1190" width="200" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
