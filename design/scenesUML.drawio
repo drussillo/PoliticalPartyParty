@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.5.1 Safari/537.36" version="28.2.5">
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.249 Electron/38.6.0 Safari/537.36" version="28.2.8">
   <diagram name="Page-1" id="FGV6vgqSfoxWxaIOB1Dc">
-    <mxGraphModel dx="1237" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="2" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="547" dy="337" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="2" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -95,6 +95,9 @@
         <mxCell id="T8Ft-jYD-zRcywxO-IXU-4" value="&lt;div&gt;+ Shader(vertexPath: const std::string&amp;amp;=&quot;&quot;, fragmentPath: const std::string&amp;amp;=&quot;&quot;)&lt;/div&gt;&lt;div&gt;+ ~Shader()&lt;/div&gt;&lt;div&gt;+ setVertex(vertexPath: const std::string&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ setFragment(fragmentPath: const std::string&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ compile(): void&lt;/div&gt;&lt;div&gt;+ link(): void&lt;/div&gt;&lt;div&gt;+ use(): void&lt;/div&gt;&lt;div&gt;+ static unbind(): void&lt;/div&gt;&lt;div&gt;- compileShader(shaderType: const GLenum, source: const char*): unsigned int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="T8Ft-jYD-zRcywxO-IXU-1" vertex="1">
           <mxGeometry y="118" width="440" height="152" as="geometry" />
         </mxCell>
+        <mxCell id="DZ8pspeIjxjF6lx1VWaZ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0-tj1WhlATv3brFM4E0G-2" target="DZ8pspeIjxjF6lx1VWaZ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="0-tj1WhlATv3brFM4E0G-2" value="Scene" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="565" y="300" width="440" height="200" as="geometry" />
         </mxCell>
@@ -180,6 +183,18 @@
         </mxCell>
         <mxCell id="XD_9YJwZ4juTtrg6oqWc-22" value="+ draw(element: Element): void&lt;div&gt;// should look at each element&amp;nbsp;&lt;/div&gt;&lt;div&gt;// and group them by shader&lt;/div&gt;&lt;div&gt;// then batch draw elements with&lt;/div&gt;&lt;div&gt;// same shaders&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="XD_9YJwZ4juTtrg6oqWc-19" vertex="1">
           <mxGeometry y="60" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DZ8pspeIjxjF6lx1VWaZ-1" value="Game" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="460" width="350" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="DZ8pspeIjxjF6lx1VWaZ-2" value="- currentScene: std::vector&amp;lt;std::unique_ptr&amp;lt;Scene&amp;gt;&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="DZ8pspeIjxjF6lx1VWaZ-1">
+          <mxGeometry y="26" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="DZ8pspeIjxjF6lx1VWaZ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="DZ8pspeIjxjF6lx1VWaZ-1">
+          <mxGeometry y="52" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DZ8pspeIjxjF6lx1VWaZ-4" value="+ mainLoop(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="DZ8pspeIjxjF6lx1VWaZ-1">
+          <mxGeometry y="60" width="350" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
