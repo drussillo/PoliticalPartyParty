@@ -1,2 +1,2 @@
 # PoliticalPartyParty
-University project
+Potential university project with classmates
