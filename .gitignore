@@ -9,3 +9,5 @@
 *.layout
 
 **/build/*
+
+**/.cache/*
